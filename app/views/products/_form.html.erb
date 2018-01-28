@@ -17,9 +17,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_area :image, id: :product_image %>
-    <%= form.file_field :image %>
+    <%= form.fields_for :thumbanail do |thumb| %>
+        <%= thumb.label :image %>
+        <%= thumb.file_field :image, :multipule => true %>
+    <% end %>
   </div>
   <div>
 

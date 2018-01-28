@@ -7,7 +7,10 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <% if  @product.thumbnails.present? %>
+    
+  <% end %>
+
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
