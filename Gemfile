@@ -39,7 +39,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-	gem 'pry-rails'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -56,4 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Image Uploader
 gem 'carrierwave'
-gem 'rmagick'
+gem 'mini_magick'
