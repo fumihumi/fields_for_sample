@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128021128) do
+ActiveRecord::Schema.define(version: 20180128022545) do
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "thumbnails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "image"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_thumbnails_on_product_id"
+  end
+
+  add_foreign_key "thumbnails", "products"
 end

@@ -1,3 +1,5 @@
 class Product < ApplicationRecord
-	mount_uploader :image , ImageUploader
+	has_many :thumbnails
+	accepts_nested_attributes_for :thumbnails
+
 end
